@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       
+        #card i{
+            scale: 1.9;
+        margin-top: 17px;
+height: 40px;
+            color: rgb(217, 43, 43);
+            display: inline;
+        }
+        #card h1{
+            display: inline;
+        }
+        #here_data{
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <input type="text" name="" id="srh">
+    <button type="submit" id="srh_btn"> Search Now</button>
+      <div id="card">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <h1 id="card_no">0</h1>
+</div>
+
+<div id="here_data" style="display: flex;flex-direction: column;">
+    <button id="hide_bt">Hide Cart</button>
+    <div id="cart_items"></div>
+</div>
+</nav>
+<button type="submit" id="add_btn"> add New</button>
+<button type="submit" id="reset_btn"> Reset Data</button>
+      <form id="productForm" style="display: none; flex-direction: column;">
+        
+    <input type="number" id="productId" placeholder="Product ID" required>
+
+    <input type="text" id="productName" placeholder="Product Name" required>
+
+    <input type="number" id="productPrice" placeholder="Price" required>
+
+    <input type="text" id="productCategory" placeholder="Category" required>
+
+    <input type="url" id="productImage" placeholder="Image URL" required>
+
+    <button type="submit">Add Product</button>
+</form>
+
+
+<div id="results">Here product</div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
