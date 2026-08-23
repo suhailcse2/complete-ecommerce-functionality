@@ -110,7 +110,7 @@ let cart_items = document.querySelector("#cart_items");
 let hide_bt = document.querySelector("#hide_bt");
 
 // initially hidden
-my_div.style.display = "none";
+
 
 // CART ICON / CARD CLICK
 card_div.addEventListener("click", () => {
@@ -128,11 +128,12 @@ hide_bt.addEventListener("click", () => {
 function show_card() {
   cart_items.innerHTML = "";
   let total = 0;
+
   card_list.forEach((product) => {
     let det = document.createElement("div");
-
+det.classList="card_ele"
     det.innerHTML = `
-            <h1>Product Details</h1>
+            
             <h2>Name: ${product.name}</h2>
             <h2>Price: ${product.price}</h2>
             <h2>Category: ${product.category}</h2>
@@ -150,7 +151,7 @@ function show_card() {
     let delete_Btn = document.createElement("button");
 
     delete_Btn.innerText = "Delete";
-
+delete_Btn.classList="del_btn"
     det.appendChild(delete_Btn);
 
     delete_Btn.addEventListener("click", (e) => {
@@ -263,14 +264,48 @@ function search_product() {
   let result = products.filter((product) =>
     product.name.toLowerCase().includes(prd.toLowerCase()),
   );
-  renderProducts(result);
+  renderProducts(result,false);
 }
-function renderProducts(productList) {
-  let my_div = document.querySelector("#results");
-  my_div.innerHTML = "";
+let cate_ele=document.querySelector("#cate_ele")
+let cate_fa=document.querySelector("#cate_fa")
+let cate_acc=document.querySelector("#cate_acc")
+let cate_home=document.querySelector("#cate_home")
+cate_ele.addEventListener('click',()=>{
+  let category=cate_ele.innerText;
+  search_cate(category)
+})
+cate_fa.addEventListener('click',()=>{
+  let category=cate_fa.innerText;
+  search_cate(category)
+})
+cate_acc.addEventListener('click',()=>{
+  let category=cate_acc.innerText;
+  search_cate(category)
+})
+cate_home.addEventListener('click',()=>{
+  let category=cate_home.innerText;
+  search_cate(category)
+})
+function search_cate(categ) {
  
-  if (productList.length === 0) {
+  let result = products.filter((product) =>
+    product.category.toLowerCase().includes(categ.toLowerCase()),
+  );
+  renderProducts(result,true);
+}
+function renderProducts(productList,r) {
+  let is_category=r;
+  let my_div = document.querySelector(`#results`);
+  let cat_list=document.querySelector("#category_list")
+  my_div.innerHTML = "";
+cat_list.innerHTML = "";
+  
+ 
+  if (productList.length === 0 && r==false) {
     my_div.innerHTML = "<h2>Product not found</h2>";
+  }
+  if (productList.length === 0 && r==true) {
+    cat_list.innerHTML = "<h2>Product not found</h2>";
   }
 
 
@@ -306,12 +341,18 @@ function renderProducts(productList) {
     `;
     card.appendChild(card_btn);
     card.appendChild(item_input);
+    if(is_category=false){
     my_div.appendChild(det);
     my_div.appendChild(deleteBtn);
     my_div.appendChild(replace_btn);
     my_div.appendChild(card);
-
-   
+    }
+   else{
+    cat_list.appendChild(det);
+    cat_list.appendChild(deleteBtn);
+    cat_list.appendChild(replace_btn);
+    cat_list.appendChild(card);
+   }
     deleteBtn.addEventListener("click", () => {
       deleteProduct(element.id);
    

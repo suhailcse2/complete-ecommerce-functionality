@@ -1,0 +1,120 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+body{
+width: 100vw;
+
+}
+       
+        #card i{
+   font-size: 27px;
+   margin: 5px;
+            
+        /* margin-top: 17px; */
+/* height: 40px; */
+            color: rgb(217, 43, 43);
+            display: inline;
+        }
+        #card h1{
+            display: inline;
+        }
+        #here_data{
+            display: none;
+        }
+        nav{
+           width: 100%;
+           height: 50px; 
+           border: 2px solid red;
+           display: flex;
+           justify-content: space-between;
+        align-items: center;
+        }
+#nav_centre{
+    width: 600px;
+    border: 2px solid green;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+align-items: center;
+
+}
+#nav_centre a{
+    margin: 30px;
+}
+#nav_left{
+    margin-left: 40px;
+}
+#nav_right{
+    margin-right: 40px;
+    display: flex;
+}
+#reset_btn{
+    margin-right: 20px;
+}
+#here_data{
+    display: none;
+       
+}
+#hero_section{
+    margin-top: 5px;
+   width: 100%;
+   height: 700px; 
+   border: 2px solid blue;
+   background: url(https://images.unsplash.com/photo-1542291026-7eec264c27ff);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+#here_data{
+    border: 2px solid red;
+    display: none;
+    flex-direction: column;
+    width: 23%;
+    height: 500px;
+overflow-y: scroll;
+  margin-left: 900px;
+  background: rgb(221, 216, 216,0.8);
+}
+#cart_items{
+    margin: 10px;
+  
+}
+.card_ele{
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    
+    
+   width: 20;
+height: 300px;
+   margin-left: 10px;
+   justify-content: center;
+   padding-left: 20px;
+}
+.del_btn{
+    width: 80px;
+    margin-top: 10px;
+}
+.card_ele h2{
+font-size: 25px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin: 2px;
+}
+.purchase{
+  width: 40%;  
+  align-self: center;
+}
+#s2{
+    width: 80%;
+    height: 600px;
+    border: 2px solid red;
+    overflow-y: scroll;
+}
+#s3{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}

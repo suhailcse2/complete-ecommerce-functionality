@@ -6,39 +6,53 @@
     <title>Document</title>
     <style>
 
-       
-        #card i{
-            scale: 1.9;
-        margin-top: 17px;
-height: 40px;
-            color: rgb(217, 43, 43);
-            display: inline;
-        }
-        #card h1{
-            display: inline;
-        }
-        #here_data{
-            display: none;
-        }
+
     </style>
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-    <input type="text" name="" id="srh">
-    <button type="submit" id="srh_btn"> Search Now</button>
-      <div id="card">
+        <div id="nav_left"><H1>SUHAIL SHOP</H1></div>
+        <div id="nav_centre"> 
+        
+<a href="">HOME</a>
+<a href="">PRODUCTS</a>
+<a href=""> CATEGORIES</a>
+        </div>
+        <div id="nav_right">
+           
+        <div id="card">
     <i class="fa-solid fa-cart-shopping"></i>
     <h1 id="card_no">0</h1>
+
+</div></div>
+<div>
+ <button type="submit" id="reset_btn"> Reset Data</button>
 </div>
 
-<div id="here_data" style="display: flex;flex-direction: column;">
-    <button id="hide_bt">Hide Cart</button>
-    <div id="cart_items"></div>
-</div>
 </nav>
+<section id="hero_section">
+<div id="here_data">
+    <button id="hide_bt">Hide Cart</button>
+    <h1>  Added Product</h1>
+    <div id="cart_items"></div>
+    <button class="purchase">Pay Now</button>
+</section>
+<section id="s2">
+    <div id="cate_div">
+    <button id="cate_ele">electronics</button>
+    <button id="cate_fa">fashion</button>
+    <button id="cate_acc">accessories</button>
+    <button id="cate_home">home</button>
+    </div>
+    <div id="category_list">Here product</div>
+</section>
+<section id="s3">
+    <input type="text" name="" id="srh">
+    <button type="submit" id="srh_btn"> Search Now</button>
 <button type="submit" id="add_btn"> add New</button>
-<button type="submit" id="reset_btn"> Reset Data</button>
+
       <form id="productForm" style="display: none; flex-direction: column;">
         
     <input type="number" id="productId" placeholder="Product ID" required>
@@ -56,6 +70,7 @@ height: 40px;
 
 
 <div id="results">Here product</div>
+</section>
     <script src="index.js"></script>
     
 </body>
