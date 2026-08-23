@@ -78,7 +78,7 @@ function saveCard() {
 }
 let list_item = card_list.length;
 let products = JSON.parse(localStorage.getItem("products")) || defaultProducts;
-renderProducts(products);
+
 let reset = document.querySelector("#reset_btn");
 reset.addEventListener("click", () => {
   localStorage.removeItem("products");
@@ -293,18 +293,20 @@ function search_cate(categ) {
   );
   renderProducts(result,true);
 }
+
 function renderProducts(productList,r) {
   let is_category=r;
   let my_div = document.querySelector(`#results`);
+
   let cat_list=document.querySelector("#category_list")
   my_div.innerHTML = "";
 cat_list.innerHTML = "";
   
  
-  if (productList.length === 0 && r==false) {
+  if (productList.length === 0 && is_category===false) {
     my_div.innerHTML = "<h2>Product not found</h2>";
   }
-  if (productList.length === 0 && r==true) {
+  if (productList.length === 0 && is_category===true) {
     cat_list.innerHTML = "<h2>Product not found</h2>";
   }
 
@@ -313,6 +315,7 @@ cat_list.innerHTML = "";
 
   productList.forEach((element) => {
     let det = document.createElement("div");
+    det.classList="srh_ele"
     let card = document.createElement("div");
     let deleteBtn = document.createElement("button");
 
@@ -322,36 +325,41 @@ cat_list.innerHTML = "";
     replace_btn.innerText = "Edit Details";
     replace_btn.className = "edit_btn";
     let card_btn = document.createElement("button");
-    card_btn.innerText = "Add To Card";
+    card_btn.innerText = "Add Card";
     card_btn.className = "list_btn";
     let item_input = document.createElement("input");
     item_input.placeholder = " No of Item";
     item_input.className = "item-no";
     item_input.style.display = "none";
+    let button_list=document.createElement("div")
+    button_list.classList="btn_list"
     det.innerHTML = `
-    <h1> Product Details</h1>
-    <h1> Name : ${element.name} </h1>
-    <h1> Price : ${element.price} </h1>
-    <h1> Category : ${element.category}</h1>
+    <h1 id="pd_head"> Product Details</h1>
+    <h2 id=""> Name : ${element.name} </h2>
+    <h2> Price : ${element.price} </h2>
+    <h2> Category : ${element.category}</h2>
       <img 
         src="${element.image}" 
         alt="${element.name}" 
-        style="height: 100px; width: 200px;"
+        style="height: 140px; width: 80%; margin-top:15px; "
     >
     `;
     card.appendChild(card_btn);
     card.appendChild(item_input);
     if(is_category=false){
+    button_list.appendChild(deleteBtn);
+    button_list.appendChild(replace_btn);
+    button_list.appendChild(card);
+    det.appendChild(button_list)
     my_div.appendChild(det);
-    my_div.appendChild(deleteBtn);
-    my_div.appendChild(replace_btn);
-    my_div.appendChild(card);
     }
-   else{
+   if(is_category=true){
+        button_list.appendChild(deleteBtn);
+    button_list.appendChild(replace_btn);
+    button_list.appendChild(card);
+    det.appendChild(button_list)
     cat_list.appendChild(det);
-    cat_list.appendChild(deleteBtn);
-    cat_list.appendChild(replace_btn);
-    cat_list.appendChild(card);
+
    }
     deleteBtn.addEventListener("click", () => {
       deleteProduct(element.id);
@@ -402,6 +410,7 @@ cat_list.innerHTML = "";
 
   });
 }
+
 let sr_btn = document.querySelector("#srh_btn");
 sr_btn.addEventListener("click", () => {
   search_product();
@@ -412,3 +421,4 @@ let add_bt = document.querySelector("#add_btn");
 add_bt.addEventListener("click", () => {
   edit_product();
 });
+renderProducts(products);
