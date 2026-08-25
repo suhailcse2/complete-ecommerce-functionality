@@ -142,13 +142,15 @@ det.classList="card_ele"
             <img 
                 src="${product.image}"
                 alt="${product.name}"
-                style="height:100px;width:200px;"
-            >
+               >
+             
         `;
     let itemTotal = product.price * product.quantity;
 
     total += itemTotal;
     let delete_Btn = document.createElement("button");
+    // let delete_Btn = document.querySelector(".del_btn");
+// let =document.querySelector("#card_img")
 
     delete_Btn.innerText = "Delete";
 delete_Btn.classList="del_btn"
