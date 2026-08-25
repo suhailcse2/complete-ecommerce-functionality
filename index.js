@@ -257,8 +257,11 @@ function replace_detail(element) {
   document.querySelector("#productCategory").value = element.category;
   document.querySelector("#productImage").value = element.image;
 }
-
-
+// let custom=document.querySelector(".btn_list")
+// custom.addEventListener('mouseenter',()=>{
+//   // let quan=document.querySelector(".item-no")
+//   // quan.style.display="flex";
+// })
 function search_product() {
   let prd = document.querySelector("#srh").value;
   let result = products.filter((product) =>
@@ -333,16 +336,17 @@ cat_list.innerHTML = "";
     item_input.style.display = "none";
     let button_list=document.createElement("div")
     button_list.classList="btn_list"
-    det.innerHTML = `
+    det.innerHTML = ` <div id="pro_elem"><span id="pro_text">
     <h1 id="pd_head"> Product Details</h1>
-    <h2 id=""> Name : ${element.name} </h2>
+    <h2> Name : ${element.name} </h2>
     <h2> Price : ${element.price} </h2>
-    <h2> Category : ${element.category}</h2>
+    <h2 id="catee"> Category : ${element.category}</h2>
+    </span>
       <img 
         src="${element.image}" 
         alt="${element.name}" 
-        style="height: 140px; width: 80%; margin-top:15px; "
-    >
+        style="height: 140px; margin-top:10px; "
+    > </div>
     `;
     card.appendChild(card_btn);
     card.appendChild(item_input);
