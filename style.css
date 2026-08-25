@@ -413,6 +413,10 @@ align-items: center;
 height: auto;
 width:100% ;
 }
+#pro_text h2{
+  margin: 0px;
+  text-align: center;
+}
 .s3{
     
   width: 90%;
@@ -603,6 +607,7 @@ card_ele h2{
 card_ele h1{
   font-size: 10px;
 }
+
   .rf{
     flex-direction: column;
     height: 650px;
@@ -696,6 +701,7 @@ flex-direction: row;
 }
 #nav_left{
   font-size: 10px;
+
 }
 .pic img{
   scale: 1.4;
@@ -731,7 +737,10 @@ font-size: 20px;
 }
 #pro_elem{
   display: flex;
- 
+}
+#pro_elem img{
+  width: 50%;
+  height: auto;
 }
 .btn_list{
   height: 40px;
@@ -770,14 +779,120 @@ width: 100%;
 .inp textarea{
 width: 100%;
 }
-
+#nav_left{
+  margin-left: 10px;
+}
+#nav_right{
+  width: auto;
+}
+#reset_button{
+  width: 80px;
+}
+#nav_centre{
+flex-wrap: wrap;
 }
 
-/* @media (max-width: 617px) {
-
-body{
-width:300%;
-justify-content: center;
-align-items: center;
+#last_box{
+  display: none;
 }
-}  */
+.s7b{
+  width: 30%;
+}
+.s3{
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 280px;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  height: 100px;
+  width: 180px;
+  flex-direction: row;
+  margin: 5px;
+}
+}
+
+@media (max-width: 400px) {
+.s3{
+  flex-direction: column;
+ 
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  height: 100px;
+  width: 80%;
+  flex-direction: row;
+  margin: 5px;
+}
+nav{
+  height: 80px;
+}
+#nav_centre {
+  flex-direction: column;
+margin: 0;
+flex-wrap: unset;
+}
+#nav_centre a{
+  height: 20px;
+  margin-bottom: 5px;
+}
+.rb{
+  flex-direction: column;
+ 
+}
+#star{
+  display: none;
+}
+.bx{
+  flex-direction: row;
+  width: 90%;
+  height: 100px;
+  
+   margin-top: 10px;
+   margin-left: 0px;
+}
+#sms{
+  width: 100%;
+ 
+  height: 70px;
+  margin: 0%;
+}
+#sms p{
+ font-size: 10px;
+}
+.bx img{
+  width: 80px;
+  height: 80px;
+}
+.s7b h1{
+  font-size: 15px;
+}
+.s7b h3{
+  font-size: 12px;
+}
+.s7{
+  height: 250px;
+  
+}
+.s6{
+height: 450px;
+
+}
+.inp{
+
+ height: 400px;
+ margin-top: 10px;
+}
+#pro_text{
+  
+}
+#pro_text h2{
+  font-size: 15px;
+  margin: 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+} 
