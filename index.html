@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav id="Home">
         <div id="nav_left"><H1>SUHAIL SHOP</H1></div>
         <div id="nav_centre"> 
         
-<a href="">HOME</a>
-<a href="">PRODUCTS</a>
-<a href=""> CATEGORIES</a>
+<a href="#Home">HOME</a>
+<a href="#s3">PRODUCTS</a>
+<a href="#contact"> CONTACTS</a>
         </div>
         <div id="nav_right">
         <div id="card">
@@ -32,26 +32,26 @@
 </div>
 </nav>
 <section id="hero_section">
-<div id="here_data">
-    <button id="hide_bt">Hide Cart</button>
+<div id="card_area">
+    <button id="hide_btn">Hide Cart</button>
     <h1>  Added Product</h1>
     <div id="cart_items"></div>
     <button class="purchase">Pay Now</button>
     </div>
 </section>
-<section id="s4-p">
+<div id="s3_top">
     <input type="text" name="" id="srh">
     <button type="submit" id="srh_btn"> Search Now</button>
 <button type="submit" id="add_btn"> add New</button>
 
-</section>
-        <div id="cate_div">
+</div>
+        <div id="category_area">
     <button id="cate_ele">electronics</button>
     <button id="cate_fa">fashion</button>
     <button id="cate_acc">accessories</button>
     <button id="cate_home">home</button>
     </div>
-<section id="s3-p">
+<section id="s3" >
 
       <form id="productForm" style="display: none; flex-direction: column;">
         
@@ -72,25 +72,31 @@
     <div id="category_list">Here product</div>
 </section>
 
- <section class="s5" id="s55">
-    <div class="rh">
+ <section class="s4" id="reviws">
+    <div class="s4_heading">
+   
      <h1> Customer"s Reviews </h1>
     </div>
-    <div class="rf">
-      <div class="rb">
-        <div id="sms">
-        <span id="star">
+    <div class="s4_main">
+
+      <div class="s4_ele">
+     
+        <div id="s4_content">
+   
+        <span id="rating">
+ 
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore ipsum iste ea nobis culpa! Rem
-          eveniet amet, fugit quam qui sed aspernatur ut ad nihil explicabo soluta vel illo?</p></div>
-        <div class="bx">
+        <p>“Really smooth shopping experience! The products are easy to search and the cart functionality works really well. The website also looks clean and modern.”</p></div>
+        <div class="profile">
+    
           <img src="f12.webp" alt="">
-          <span class="bca">
+          <span class="pro_details">
+         
             <h1>Sameer</h1>
             <h3>Happy Customer</h3>
 
@@ -98,9 +104,9 @@
         
         </div>
       </div>
-      <div class="rb">
-        <div id="sms">
-        <span id="star">
+      <div class="s4_ele">
+        <div id="s4_content">
+        <span id="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -108,31 +114,29 @@
           <i class="fa-solid fa-star"></i>
 
         </span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore ipsum iste ea nobis culpa! Rem
-          eveniet amet, fugit quam qui sed aspernatur ut ad nihil explicabo soluta vel illo?</p></div>
-        <div class="bx">
+        <p>“I loved how simple and easy the website is to use. The category filters make finding products quick, and everything feels well organized.”</p></div>
+        <div class="profile">
           <img src="f32.png" alt="">
-          <span class="bca">
+          <span class="pro_details">
             <h1>Arbaz khan</h1>
             <h3>Happy Customer</h3>
           </span>
         </div>
       </div>
-      <div class="rb">
-        <div id="sms">
-        <span id="star">
+      <div class="s4_ele">
+        <div id="s4_content">
+        <span id="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore ipsum iste ea nobis culpa! Rem
-          eveniet amet, fugit quam qui sed aspernatur ut ad nihil explicabo soluta vel illo?</p>
+        <p>“Great e-commerce website with useful features like product editing, search, categories, and cart management. The responsive design makes it convenient to use on different screen sizes.”</p>
           </div>
-        <div class="bx">
+        <div class="profile">
           <img src="f3.png" alt="">
-          <span class="bca">
+          <span class="pro_details">
             <h1>Suhail khan</h1>
             <h3>Happy Customer</h3>
           </span>
@@ -140,38 +144,41 @@
       </div>
       </div>
   </section>
-   <section class="s3">
-    <div class="box">
-        <span id="b_img"><i class="fa-solid fa-truck-fast"></i></span>
+   <section class="s5" id="#services">
+    <div class="s5_ele">
+   
+        <span id="service_img"><i class="fa-solid fa-truck-fast"></i></span>
+
       
-      <span class="bc">
+      <span class="service">
+   
         <h1>Free Shipping</h1>
         <h3>On All Orders</h3>
 
       </span>
     </div>
-    <div class="box">
-        <span id="b_img">  <i class="fa-solid fa-sack-dollar"></i></span>
+    <div class="s5_ele">
+        <span id="service_img">  <i class="fa-solid fa-sack-dollar"></i></span>
     
-      <span class="bc">
+      <span class="service">
         <h1>10 Days Returns</h1>
         <h3>Moneyback Guarantee</h3>
 
       </span>
     </div>
-    <div class="box">
-        <span id="b_img">  <i class="fa-solid fa-gifts"></i></span>
+    <div class="s5_ele">
+        <span id="service_img">  <i class="fa-solid fa-gifts"></i></span>
     
-      <span class="bc">
+      <span class="service">
         <h1>Offer & Gifts</h1>
         <h3>On All Orders</h3>
 
       </span>
     </div>
-    <div class="box">
-        <span id="b_img">      <i class="fa-solid fa-wallet"></i></span>
+    <div class="s5_ele">
+        <span id="service_img">      <i class="fa-solid fa-wallet"></i></span>
 
-      <span class="bc">
+      <span class="service">
         <h1>Secure Payments</h1>
         <h3>Protected By PayPal</h3>
 
@@ -179,13 +186,16 @@
     </div>
 
   </section>
- <section class="s6" id="s66">
-    <div class="s6h">
+ <section class="s6" id="contact">
+    <div class="s6_heading">
+  
       <h1>Contact Us</h1>
     </div>
-    <div class="s6b">
-      <span class="inp">
-        <form action="#top1">
+    <div class="s6_main">
+ 
+      <span class="form_details">
+  
+        <form action="#Home" id="contact_form">
           <input type="text" name="" id="" placeholder="Enter Your Name" required>
           <input type="email" name="" id="" placeholder="Enter Your Email" required>
           <input type="number" name="" id="" placeholder="Enter Your Number" required>
@@ -193,7 +203,8 @@
           <button type="submit" >Send Message</button>
         </form>
       </span>
-      <span class="pic">
+      <span class="form_pic">
+    
         <img src="—Pngtree—customer service concept online helpline_8644425.png" alt="">
       </span>
     </div>
