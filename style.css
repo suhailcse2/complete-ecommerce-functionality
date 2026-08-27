@@ -704,7 +704,7 @@ font-size: 20px;
 }
 #product_element{
   width: 100%;
-  border: 2px solid red;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -716,7 +716,6 @@ font-size: 20px;
 }
 .btn_list{
   height: 40px;
-  border: 2px solid green;
 }
 #product_text{
   width: 50%;
